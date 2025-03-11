@@ -10,7 +10,7 @@ FAVICON = SITEURL + '/images/web_icon_64x64.icon'
 BROWSER_COLOR = '#333333'
 RELATIVE_URLS = True
 
-SOCIAL = (('envelope', 'mailto:guqian110@163.com'),
+SOCIAL = (('envelope', 'mailto:liwantong@163.com'),
     ('github','https://github.com/wantong'),
         )
 
@@ -58,7 +58,7 @@ CC_LICENSE = {
 
 COPYRIGHT_YEAR = 2025
 
-STATIC_PATHS = ["extra/custom.css"]
+#  STATIC_PATHS = ["extra/custom.css"]
 
 # Enable i18n plugin.
 # PLUGINS = ["i18n_subsites"]
