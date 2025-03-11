@@ -1,7 +1,10 @@
 Title: Function safty course 1
 Date: 2025-03-10 10:20
-Category: Review
+Category: FuSa
+Tag: Automotive
 Lang: zh-CN
+
+[TOC]
 
 ## General concept
 功能安全**动机**：安全相关问题伤害人并可导致高额修复活不可预期成本增加
@@ -23,4 +26,25 @@ Lang: zh-CN
 - 特殊功能车辆不在功能安全考虑范围之内
 - 主要关注由于电子相关系统失效导致的伤害
 
+## 功能安全介绍
+
+### 什么是功能安全
+ISO26262 对功能安全的定义: 整车层级危害分析与风险评估衍生的最高安全层级要求
+
+### 功能安全目标
+针对行车级别的伤害分析结果及风险评估的顶层安全需求
+功能安全主要关注:
+- 系统性失效, 如:
+    >- Software bug
+    >- 奔腾FDIV bug
+- 随机性失效, 如：
+    >- 非预期老化
+    >- 电路短路
+    >- 断线
+    >- 软错误（瞬态故障，参照JESD89A） 宇宙中高能粒子对失效的影响
+设计冗余的两种方法：
+- 同质冗余（homogeneous redundancy）
+- 多样性冗余（divers redundancy）
+
+## 功能安全周期
 

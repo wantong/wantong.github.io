@@ -1,3 +1,4 @@
+# this config and custom css reference qian-gu.github.io settings
 AUTHOR = 'winter'
 SITENAME = "Sumarization"
 SITEURL = "https://wantong.github.io"
@@ -33,6 +34,12 @@ PORT = 3588          # ÊåáÂÆöÁ´?Âè?
 
 THEME = 'Flex'
 THEME_COLOR = 'light'
+
+PLUGIN_PATHS = ['../pelican-pluginss']
+PLUGINS = ['i18n_subsites',  'neighbors',  'related_posts',
+           'sitemap', 'representative_image', 'render_math',
+           'series',]
+
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
 CATEGORY_FEED_ATOM = None
@@ -41,13 +48,21 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 
+# dark mode
+THEME_COLOR = 'ligtht'
+THEME_COLOR_AUTO_DETECT_BROWSER_PREFERENCE = True
+THEME_COLOR_ENABLE_USER_OVERRIDE = True
+
+PYGMENTS_STYLE = 'monokai'
+PYGMENTS_STYLE_DARK = 'monokai'
+
 DEFAULT_PAGINATION = 10
 
 # Uncomment following line if you want document-relative URLs when developing
 # RELATIVE_URLS = True
 # pelicanconf.py
 
-
+CJK_AUTO_SPAING_TITLE = True
 ROBOTS = "index, follow"
 
 CC_LICENSE = {
@@ -66,3 +81,37 @@ COPYRIGHT_YEAR = 2025
 # JINJA_ENVIRONMENT = {"extensions": ["jinja2.ext.i18n"]}
 
 MAIN_MENU = True
+
+MARKDOWN = {
+    "extension_configs": {
+        # Needed for code syntax highlighting
+        "markdown.extensions.codehilite": {"css_class": "highlight"},
+        "markdown.extensions.extra": {},
+        "markdown.extensions.meta": {},
+        "markdown.extensions.admonition": {},
+        # This is for enabling the TOC generation
+        "markdown.extensions.toc": {"title": "Table of Contents"},
+    },
+    "output_format": "html5",
+}
+
+SITEMAP = {
+    'format': 'xml',
+    'priorities': {
+        'articles': 0.6,
+        'indexes': 0.6,
+        'pages': 0.5,
+    },
+    'changefreqs': {
+        'articles': 'monthly',
+        'indexes': 'daily',
+        'pages': 'monthly',
+    }
+}
+STATIC_PATHS = ['images', 'files', 'extra/custom.css']
+
+EXTRA_PATH_METADATA = {
+    'extra/custom.css': {'path': 'static/custom.css'},
+}
+
+CUSTOM_CSS = 'static/custom.css'
