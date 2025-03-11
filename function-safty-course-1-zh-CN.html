@@ -12,9 +12,16 @@
 
     <link rel="stylesheet" type="text/css" href="./theme/stylesheet/style.min.css">
 
+    <link id="dark-theme-style" rel="stylesheet" type="text/css"
+          media="(prefers-color-scheme: dark)"
+    href="./theme/stylesheet/dark-theme.min.css">
 
+    <link id="pygments-dark-theme" rel="stylesheet" type="text/css"
+              media="(prefers-color-scheme: dark)"
+          href="./theme/pygments/monokai.min.css">
     <link id="pygments-light-theme" rel="stylesheet" type="text/css"
-          href="./theme/pygments/github.min.css">
+              media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"
+          href="./theme/pygments/monokai.min.css">
 
 
 
@@ -22,6 +29,7 @@
   <link rel="stylesheet" type="text/css" href="./theme/font-awesome/css/brands.css">
   <link rel="stylesheet" type="text/css" href="./theme/font-awesome/css/solid.css">
 
+  <link rel="stylesheet" type="text/css" href="/static/custom.css">
 
   <link rel="shortcut icon" href="https://wantong.github.io/images/web_icon_64x64.icon" type="image/x-icon">
   <link rel="icon" href="https://wantong.github.io/images/web_icon_64x64.icon" type="image/x-icon">
@@ -47,27 +55,27 @@
  
 
 <meta name="author" content="winter" />
-<meta name="description" content="General concept 功能安全动机：安全相关问题伤害人并可导致高额修复活不可预期成本增加 功能安全失效包含: - 系统性失效 - 随机性 …" />
+<meta name="description" content="Table of Contents General concept 功能安全介绍 什么是功能安全 功能安全目标 功能安全周期 General concept 功能安全动机：安全相关问题伤害人并可导 …" />
 <meta name="keywords" content="">
 
 
   <meta property="og:site_name" content="Sumarization"/>
   <meta property="og:title" content="Function safty course 1"/>
-  <meta property="og:description" content="General concept 功能安全动机：安全相关问题伤害人并可导致高额修复活不可预期成本增加 功能安全失效包含: - 系统性失效 - 随机性 …"/>
+  <meta property="og:description" content="Table of Contents General concept 功能安全介绍 什么是功能安全 功能安全目标 功能安全周期 General concept 功能安全动机：安全相关问题伤害人并可导 …"/>
   <meta property="og:locale" content="zh_CN"/>
   <meta property="og:url" content="./function-safty-course-1-zh-CN.html"/>
   <meta property="og:type" content="article"/>
   <meta property="article:published_time" content="2025-03-10 10:20:00+08:00"/>
   <meta property="article:modified_time" content=""/>
   <meta property="article:author" content="./author/winter.html">
-  <meta property="article:section" content="Review"/>
+  <meta property="article:section" content="FuSa"/>
   <meta property="og:image" content="https://wantong.github.io/images/toppicture.png">
 
   <title>Sumarization &ndash; Function safty course 1</title>
 
 
 </head>
-<body class="light-theme">
+<body >
 
 <aside>
   <div>
@@ -120,14 +128,24 @@ rel="me"           href="mailto:liwantong@163.com"
       
     <h1 id="function-safty-course-1">Function safty course 1</h1>
     <p>
-      Posted on 一 10 三月 2025 in <a href="./category/review.html">Review</a>
+      Posted on 一 10 三月 2025 in <a href="./category/fusa.html">FuSa</a>
 
     </p>
   </header>
 
 
   <div>
-    <h2>General concept</h2>
+    <div class="toc"><span class="toctitle">Table of Contents</span><ul>
+<li><a href="#general-concept">General concept</a></li>
+<li><a href="#_1">功能安全介绍</a><ul>
+<li><a href="#_2">什么是功能安全</a></li>
+<li><a href="#_3">功能安全目标</a></li>
+</ul>
+</li>
+<li><a href="#_4">功能安全周期</a></li>
+</ul>
+</div>
+<h2 id="general-concept">General concept</h2>
 <p>功能安全<strong>动机</strong>：安全相关问题伤害人并可导致高额修复活不可预期成本增加
 功能安全失效包含:
 - 系统性失效
@@ -139,15 +157,39 @@ rel="me"           href="mailto:liwantong@163.com"
 - 信息安全
 - Part11 部分只要针对功能安全再芯片领域的指南</p>
 <p>功能安全的<strong>目的</strong>：
-- 用于安全相关的系统</p>
-<blockquote>
++ 用于安全相关的系统
+    + 包括一个或多个电气电力系统
+    + 量产的路面车辆，不包含助理脚踏车
++ 特殊功能车辆不在功能安全考虑范围之内
++ 主要关注由于电子相关系统失效导致的伤害</p>
+<h2 id="_1">功能安全介绍</h2>
+<h3 id="_2">什么是功能安全</h3>
+<p>ISO26262 对功能安全的定义: 整车层级危害分析与风险评估衍生的最高安全层级要求</p>
+<h3 id="_3">功能安全目标</h3>
+<p>针对行车级别的伤害分析结果及风险评估的顶层安全需求
+功能安全主要关注:</p>
 <ul>
-<li>包括一个或多个电气电力系统</li>
-<li>量产的路面车辆，不包含助理脚踏车</li>
-<li>特殊功能车辆不在功能安全考虑范围之内</li>
-<li>主要关注由于电子相关系统失效导致的伤害</li>
+<li>
+<p>系统性失效, 如:</p>
+<ul>
+<li>Software bug</li>
+<li>奔腾FDIV bug</li>
 </ul>
-</blockquote>
+</li>
+<li>
+<p>随机性失效, 如：</p>
+<ul>
+<li>非预期老化</li>
+<li>电路短路</li>
+<li>断线</li>
+<li>软错误（瞬态故障，参照JESD89A） 宇宙中高能粒子对失效的影响</li>
+</ul>
+</li>
+</ul>
+<p>设计冗余的两种方法：
++ 同质冗余（homogeneous redundancy）
++ 多样性冗余（divers redundancy）</p>
+<h2 id="_4">功能安全周期</h2>
   </div>
   <div class="tag-cloud">
     <p>
@@ -155,6 +197,8 @@ rel="me"           href="mailto:liwantong@163.com"
   </div>
 
 
+  <div class="neighbors">
+  </div>
 
 
 
@@ -167,6 +211,14 @@ rel="me"           href="mailto:liwantong@163.com"
 </p>
 <p>
 Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> theme
+  <span class="footer-separator">|</span>
+  Switch to the <a href="javascript:void(0)" onclick="theme.switch(`dark`)">dark</a> | <a href="javascript:void(0)" onclick="theme.switch(`light`)">light</a> | <a href="javascript:void(0)" onclick="theme.switch(`browser`)">browser</a> theme
+  <script id="dark-theme-script"
+          src="./theme/dark-theme/dark-theme.min.js"
+          data-enable-auto-detect-theme="True"
+          data-default-theme="ligtht"
+          type="text/javascript">
+  </script>
 </p><p>
   <a rel="license"
      href="http://creativecommons.org/licenses/by-sa/4.0/"

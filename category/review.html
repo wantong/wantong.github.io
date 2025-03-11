@@ -12,9 +12,16 @@
 
     <link rel="stylesheet" type="text/css" href="../theme/stylesheet/style.min.css">
 
+    <link id="dark-theme-style" rel="stylesheet" type="text/css"
+          media="(prefers-color-scheme: dark)"
+    href="../theme/stylesheet/dark-theme.min.css">
 
+    <link id="pygments-dark-theme" rel="stylesheet" type="text/css"
+              media="(prefers-color-scheme: dark)"
+          href="../theme/pygments/monokai.min.css">
     <link id="pygments-light-theme" rel="stylesheet" type="text/css"
-          href="../theme/pygments/github.min.css">
+              media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"
+          href="../theme/pygments/monokai.min.css">
 
 
 
@@ -60,7 +67,7 @@
 
 
 </head>
-<body class="light-theme">
+<body >
 
 <aside>
   <div>
@@ -120,31 +127,23 @@ rel="me"           href="mailto:liwantong@163.com"
     </p>
   </header>
   <div>
-      <div><h2>General concept</h2>
-<p>功能安全<strong>动机</strong>：安全相关问题伤害人并可导致高额修复活不可预期成本增加
-功能安全失效包含:
-- 系统性失效
-- 随机性 …</p></div>
+      <div><div class="toc"><span class="toctitle">Table of Contents</span><ul>
+<li><a href="#general-concept">General concept</a></li>
+<li><a href="#_1">功能安全介绍</a><ul>
+<li><a href="#_2">什么是功能安全</a></li>
+<li><a href="#_3">功能安全目标</a></li>
+</ul>
+</li>
+<li><a href="#_4">功能安全周期</a></li>
+</ul>
+</div>
+<h2 id="general-concept">General concept</h2>
+<p>功能安全<strong>动机</strong>：安全相关问题伤害人并可导 …</p></div>
         <br>
         <a class="btn"
            href="../function-safty-course-1-zh-CN.html#function-safty-course-1">
           Continue reading
         </a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="../my-first-review.html#my-first-review">My First Review</a></h2>
-    <p>
-      Posted on 五 03 十二月 2010 in <a href="../category/review.html">Review</a>
-
-
-    </p>
-  </header>
-  <div>
-      <div><p>Following is a review of my favorite mechanical keyboard
-什么也不是</p></div>
   </div>
 </article>
 
@@ -159,6 +158,14 @@ rel="me"           href="mailto:liwantong@163.com"
 </p>
 <p>
 Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> theme
+  <span class="footer-separator">|</span>
+  Switch to the <a href="javascript:void(0)" onclick="theme.switch(`dark`)">dark</a> | <a href="javascript:void(0)" onclick="theme.switch(`light`)">light</a> | <a href="javascript:void(0)" onclick="theme.switch(`browser`)">browser</a> theme
+  <script id="dark-theme-script"
+          src="../theme/dark-theme/dark-theme.min.js"
+          data-enable-auto-detect-theme="True"
+          data-default-theme="ligtht"
+          type="text/javascript">
+  </script>
 </p><p>
   <a rel="license"
      href="http://creativecommons.org/licenses/by-sa/4.0/"
